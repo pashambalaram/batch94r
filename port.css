@@ -1,0 +1,297 @@
+
+:root{
+    --text-color:#1a1c20;
+    --link-color:#4a76ee;
+    --background-color:#eeeff1;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'poppins',sans-serif;
+    background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+a{
+    color: var(--link-color);
+    text-decoration: none;
+
+}
+/* navbar */
+nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 50px;
+height: 80px;
+}
+nav .left a{
+color:var(--link-color);   
+font-size: 22px;
+font-weight:600 ;
+}
+nav .right a{
+    color: var(--text-color);
+    margin:0 10px;
+
+}
+nav .right a:last-child{
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+nav .right a span{
+
+    margin-left: 5px;
+}
+ /* <!-- section1:Hero --> */
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom:100px ;
+    gap: 14px;
+   
+} 
+.hero-section .text{
+    flex: 5;
+}
+.hero-section .text h2{
+    font-size: 45px;
+}
+.hero-section .text .links{
+    margin-top: 25px;
+}
+.hero-section .text .links a{
+    display: inline-block;
+     padding: 5px 10px;
+    border: 2px solid var(--text-color);
+    margin-bottom: 10px; 
+    transition:.1s ;
+}
+.hero-section .text .links a:hover{
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+
+}
+.hero-section .headshot{
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+.hero-section .headshot img{
+    border-radius:50% ;
+    width: 350px;
+    height: 350px;
+}
+  /* <!-- section1:Skills --> */
+.skill_section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+    
+}  
+.skill_section h2{
+    text-align: center;
+    font-size: 35px;
+
+}
+.skill_section .text{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.skill_section .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 35px;
+}
+.skill_section .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    gap: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 5px;
+}
+.skill_section .cells .cell img{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+
+}
+.skill_section .cells .cell span{
+    font-size: 20px;
+}
+/* testimonials_section */
+.testimonials_section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.testimonials_section h2{
+    font-size: 35px;
+}
+.testimonials_section .group{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.testimonials_section .group .person_detailse{
+    text-align: center;
+    flex: 2;
+
+
+}
+.testimonials_section .group .person_detailse img{
+    width: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    
+}
+.testimonials_section .group .person_detailse  p{
+    font-weight: 600;
+}
+.testimonials_section .group .person_detailse p:last-child{
+    font-weight: normal;
+
+}
+.testimonials_section .group .text{
+    flex: 8;
+
+
+}
+/* <!-- section1:Contact -->
+ */
+.contact_section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.contact_section h2{
+    font-size: 35px;
+}
+.contact_section .group{
+    display: flex;
+    gap: 50px;
+}
+.contact_section .group .text{
+    flex: 3;
+    margin-top: 20px;
+
+}
+.contact_section .group form{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+
+}
+.contact_section .group form input,
+.contact_section .group form textarea{
+    font-family: 'poppins',sans-serif;
+    border: 2px solid blue;
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+
+}
+.contact_section .group form button{
+    font-size: 16px;
+    font-family: 'poppins',sans-serif;
+    color: #fff;
+    background-color: var(--link-color);
+    margin-top: 10px;
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+
+}
+.contact_section .group form button:hover{
+    filter: brightness(.9);
+
+}
+
+
+
+@media(max-width:850px){
+/* <!-- section1:Hero --> */
+.hero-section {
+  flex-direction: column-reverse;
+}
+/* testimonials_section */
+.testimonials_section{
+    text-align: center;
+
+}
+.testimonials_section .group{
+    flex-direction: column;
+}
+  /* <!-- section1:Contact -->  */
+  .contact_section .group{
+    flex-direction: column;
+
+  }
+
+
+
+}
+
+@media(max-width:680px){
+    /* nav bar */
+    nav{
+        padding: 0 20px;
+    }
+    nav .right a span{
+        display: none;
+
+    }
+    nav .right a
+    {
+        font-size: 22px;
+
+    }
+    nav .right a:last-child{
+        color: var(--text-color);
+        background-color:transparent;
+        padding: 0;
+
+    }
+
+    .hero-section{
+        /* <!-- section1:Hero --> */
+        padding: 0 20px;
+
+    }
+    .hero-section .text h2{
+        font-size: 30px;
+    }
+     /* <!-- section2:Skills --> */
+     .skill_section {
+        padding: 0 20px;
+     }
+     .skill_section .cells .cell .span{
+        font-size:16px ;
+
+     }
+     /* testmony_section */
+     .testimonials_section{
+        padding: 0 20px;
+     }
+       /* <!-- section1:Contact -->  */
+       .contact_section{
+        padding: 0 20px;
+       }
+}
